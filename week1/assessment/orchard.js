@@ -151,27 +151,18 @@ console.log('The days: '+days)
 
 // CODE HERE
 
-let fujiTons= fujiAcres.slice()
-let galaTons =galaAcres.slice()
-let pinkTons =pinkAcres.slice()
+let fujiTons= [];
+let galaTons =[];
+let pinkTons =[];
 
-//I need to have 3 different variable to be able to call them for total. I might use one for loop to find each, however i was not sure thats why I created 3 variables
-
-let fujitotal=0;
-let galatotal=0;
-let pinktotal=0;
-
-// I used for loop to find total and multiply by the number of tons for each acres. 
-for (let i=0; i<fujiTons.length; i++){
-    fujitotal+=fujiTons[i]*6.5;
-    galatotal+=galaTons[i]*6.5;
-    pinktotal+=pinkTons[i]*6.5;
+for(let i=0; i<fujiAcres.length; i++){
+    fujiTons.push(fujiAcres[i]*6.5);
+    galaTons.push(galaAcres[i]*6.5);
+    pinkTons.push(pinkAcres[i]*6.5);
 }
-console.log('Fuji total is: ' +fujitotal+' tons')
-
-console.log('Gala total is: '+galatotal+' tons')
-
-console.log('Pink total is: '+pinktotal+' tons')
+console.log(fujiTons)
+console.log(galaTons)
+console.log(pinkTons)
  
 
 
@@ -196,16 +187,26 @@ console.log('Pink total is: '+pinktotal+' tons')
 
 
 //to be able to find the pounds from tons, i need to multiply total with 2000.
-let fujiPounds = fujitotal*2000; 
-console.log(`Fuji acres has: ${fujiPounds} pounds`)
-let galaPounds = galatotal*2000;
-console.log(`Gala acres has: ${galaPounds} pounds`)
-let pinkPounds = pinktotal*2000;
-console.log(`Pink acres has: ${pinkPounds} pounds`)
 
 
+let fujiPounds =0;
+let galaPounds =0;
+let pinkPounds =0;
+
+for( let i=0; i<fujiTons.length; i++){
+    fujiPounds+= fujiTons[i]*2000;
+    galaPounds+= galaTons[i]*2000;
+    pinkPounds+=pinkTons[i]*2000;
+}
+
+console.log(fujiPounds)
+console.log(galaPounds);
+console.log(pinkPounds)
 
 
+// console.log(`Fuji acres has: ${fujiPounds} pounds`)
+// console.log(`Gala acres has: ${galaPounds} pounds`)
+// console.log(`Pink acres has: ${pinkPounds} pounds`)
 
 
 
@@ -228,13 +229,14 @@ console.log(`Pink acres has: ${pinkPounds} pounds`)
 // CODE HERE
 
 //i need to use pounds multiply by their price per pound. this way i was able to calculate the total profit by each acres.
-let fujiProfit = fujiPounds*0.89;
+
+let fujiProfit = fujiPounds * fujiPrice;
 console.log(`Fuji profit is:$${fujiProfit}`)
 
-let galaProfit = galaPounds*0.64;
+let galaProfit = galaPounds * galaPrice;
 console.log(`Gala profit is:$${galaProfit}`)
 
-let pinkProfit = pinkPounds*0.55;
+let pinkProfit = pinkPounds * pinkPrice;
 console.log(`Pink profit is:$${pinkProfit}`)
 
 
