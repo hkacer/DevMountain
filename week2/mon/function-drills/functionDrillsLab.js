@@ -302,10 +302,13 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-function str(String){
-  console.log(String.toUpperCase())
+function allUpper(str){
+  console.log(str.toUpperCase())
 }
-sampleString=
+allUpper(sampleString)
+
+
+
 ////////////////// PROBLEM 18 ////////////////////
 /*
   Write a function called emailCheck that takes in
@@ -316,6 +319,20 @@ sampleString=
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+let check='abc  23'
+function emailCheck(email){
+  String(email);
+  email.trim(' ');
+  console.log(email)
+  //return email.includes('@') ? 'email verified' : 'must provide a valid email address'
+  if(email.includes('@')){
+    console.log('email verified')
+  }else{
+    console.log('must provide a valid email address')
+  }
+}
+emailCheck(check)
+
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
@@ -325,6 +342,11 @@ sampleString=
 
 //CODE HERE
 
+function cho(gold){
+  if(gold){
+
+  }
+}
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
