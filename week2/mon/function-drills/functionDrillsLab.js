@@ -342,10 +342,8 @@ emailCheck(check)
 
 //CODE HERE
 
-function cho(gold){
-  if(gold){
-
-  }
+const frog = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 ////////////////// PROBLEM 20 ////////////////////
@@ -363,7 +361,10 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+let arrayIsAscending=0;
 
+sampleArray.sort((a,b)=> a-b)
+console.log(sampleArray)
 
 ////////////////// PROBLEM 22 ////////////////////
 
@@ -387,10 +388,11 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
-
+let globalScope = String(duck) // other variables are not global they are inside of the functions
+console.log(globalScope)
 //This array should contain the variable names (as strings) accessible in the bathroom function.
 let bathroomScope = []
+console.log(bathroomScope)
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
 let bathtubScope = []
