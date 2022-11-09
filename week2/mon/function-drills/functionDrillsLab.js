@@ -342,10 +342,11 @@ emailCheck(check)
 
 //CODE HERE
 
-const frog = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+function dove(num){
+  return num/3
 }
-
+dove();
+console.log(dove(10))
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
@@ -372,13 +373,20 @@ let duck = "cute";
 
 function bathroom() {
   let rubberDuck = "squeaky";
-  function bathtub() {
-    let sailorDuck = "nautical";
-  }
+  
+  return String(rubberDuck)
+  
 }
+function bathtub() {
+  let sailorDuck = "nautical";
+  return String(sailorDuck)
+
+}
+
 
 function pond() {
   let realDuck = "fluffy";
+  return String(realDuck)
 }
 
 /*
@@ -391,11 +399,12 @@ function pond() {
 let globalScope = String(duck) // other variables are not global they are inside of the functions
 console.log(globalScope)
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = bathroom(); 
 console.log(bathroomScope)
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
-
+let bathtubScope = bathtub()
+console.log(bathtubScope)
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = pond()
+console.log(pondScope)
