@@ -322,7 +322,7 @@ wizardInst.castSpell()
 
       // }else{
         
-        return `${this.brand} ${this.model} has been sold`
+        return `${this.brand} ${this.model} has been sold` 
     
       
     }
@@ -475,14 +475,12 @@ console.log(vehicle.mileage)
 */
 
 //Code Here
-class mineVehicle extends Vehicle{
+class myFirstVehicle extends Vehicle{
   constructor(capacity,color){
     super(brand,year,name123)
     this.brand=brand;
     this.year=year;
     this.name123=name123;
-
-
 
   }
   
@@ -515,7 +513,7 @@ console.log(myFirstMotorcycle)
 /*
   Call the move function on myFirstMotorcycle (don't forget the parameter)
 */
-myFirstMotorcycle.move(60)
+myFirstMotorcycle.move(90)
 console.log(myFirstMotorcycle)
 /*
   Let's make another class based off of Vehicle. 
@@ -565,7 +563,7 @@ console.log(isWorking.checkSeaWorth())
 */
 
 //Code Here
-
+let newFirstBoat= new Boat('balck',34,'hey','fast',)
 /*
   Call the checkSeaworthiness method on your new boat
 */

@@ -6,15 +6,17 @@
 */
 
 // CODE HERE
-
+function multiply(num1,num2,callback){
+  return callback=num1*num2
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// multiply(4, 3, answer => {
-//   console.log('The answer is ' + answer) //should console.log 12
-// })
+multiply(4, 3, answer => {
+console.log('The answer is ' + answer) //should console.log 12
+ })
 
 
 
@@ -103,6 +105,13 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE
+let uniq= (arr,cb)=>{
+  let newArr=Array.from(new Set(arr))
+  // Array is library in the JS. it is not an array
+  //you can call it anwhere . it takes one parameter listed and truning to the arry.
+
+cb(newArr)
+}
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -112,7 +121,9 @@ var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
 */
 
 // CODE HERE
-
+uniq(names,(uniqArr)=>{
+  console.log(`The new names array with all the duplicate items removed is ${uniq}.`)
+})
 
 
 ////////// PROBLEM 6 //////////
@@ -166,14 +177,22 @@ var users = [
 // Do not edit the code above.
 
 // CODE HERE 
-
+function getUserById(arrOb,id,callback){
+  let matching=null
+  for(let i=0; i<arrOb.length; i++){
+    if(arrOb[i].id===id){
+      matching= arrOb[i]
+    }
+  }
+  callback(matching)
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
 // getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+// console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
 // })
 
 ////////// CHALLENGE //////////
