@@ -15,9 +15,11 @@ function getLuckyNum(num){
     let arr= [1,2,3,4,5,6,7,8,9,10]
     let arrLucky=[]
     for(let i=0; i<num; i++){
-        arrLucky.push(arr[Math.floor(Math.random()*num)])
+        let randomIdex=Math.floor(Math.random()*arr.length)
+    arrLucky.push(arr[randomIdex])
+    arr.splice(randomIdex,1)
     }
-   
+   return arrLucky
 }
 let luckyNum=getLuckyNum(6);
 console.log(luckyNum)

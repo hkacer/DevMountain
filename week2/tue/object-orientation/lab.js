@@ -313,7 +313,7 @@ wizardInst.castSpell()
       this.storage=storage;
       this.color=color;
       this.price=price;
-      this.sold= false;
+      this.sold= false
     }
     sell(sold){
       this.sold=sold;
@@ -542,15 +542,15 @@ class Boat extends Vehicle{
     this.isSeaWorthy=isSeaWorthy;
   }
   checkSeaWorth(){
-    if(this.isSeaWorthy){
+    if(this.isSeaWorthy===true){
       console.log(`${this.color} ${this.type} ${this.name} is seaworthy`)
     }else{
       console.log(`you must to get your ${this.type} in shape`)
     }
   }
   performMaintenance(main){
-    this.isSeaWorthy==true;
-    return main
+    this.isSeaWorthy=true;
+  
   }
 }
 
