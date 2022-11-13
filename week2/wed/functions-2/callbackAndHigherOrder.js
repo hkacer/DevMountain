@@ -134,8 +134,24 @@ uniq(names,(uniqArr)=>{
 */
 
 // CODE HERE 
+function each(arr, callback){
+  arr.forEach(function(element,index){
+    return callback(element,index)
+
+  })
+
+}
+each(names,(element,index)=>{ // outside funstion to invoke callback. fat arrow indicated that second part is a function and console.log
+  console.log(`The item at index ${index} is ${element}.`)
+})
 
 
+
+
+
+// numArray.forEach(function(element, index){
+//   console.log(${element} is at index ${index})
+// })
 /*
   Invoke the each function, passing in the names array and a callback function.
   The callback function should take in two parameters, item and index.
@@ -251,3 +267,5 @@ function getUserById(arrOb,id,callback){
 */
 
 // CODE HERE
+
+

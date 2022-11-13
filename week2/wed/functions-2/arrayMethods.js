@@ -126,11 +126,9 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 */
 
 // CODE HERE
-const addingAll= (product,tax1)=>{
-  product.price=product.tax+(tax1)
-}
+const addingAll= orders.map(value=>value.price + (value.price*value.tax)).reduce(((acc,curr)=>acc+curr))
 
-console.log(orders)
+console.log(`adding all with tax ${addingAll}`)
 
 ////////// PROBLEM 6 //////////
 
@@ -149,3 +147,7 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 // CODE HERE
+
+let bobsTotal= purchases.filter(purchase=>purchase.owner==='Bob').reduce((acc,curr)=>acc+curr.price,0)
+
+console.log(bobsTotal)
