@@ -1,0 +1,95 @@
+body {
+  background: #ddd;
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  font-family: "Open Sans", sans-serif;
+	font-size: large;
+}
+
+nav {
+	border-bottom: 2px solid orange;
+}
+
+ol {
+	padding-left: 0;
+}
+
+.crumb {
+	margin-right: 2em;
+	display: inline;
+}
+
+a {
+	color: orange;
+}
+
+a:visited {
+	color: crimson;
+}
+
+
+input {
+	display: block;
+}
+
+img {
+	max-width: 300px;
+}
+#know{
+	color:black;
+	background-color:pink;
+	display: block;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+button{
+	color: black;
+	background-color: yellow;
+	display: flexbox;
+	width: 150px;
+	height: 50px;
+}
+.knowme-container{
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	width: 600px;
+	padding: 80px;
+	border: 2px black;
+	border-color: aquamarine;
+}
+
+.myGoals{
+	color:black;
+	background-color: aqua;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	width: 500px;
+	padding: 20px;
+	border: 2px black;
+	border-color: pink;
+
+}
+
+#firstone{
+	width: 150px;
+	padding: 20px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+
+}
+#secondone{
+	width: 150px;
+	padding: 20px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
