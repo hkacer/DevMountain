@@ -19,3 +19,12 @@ function ritual(){
 
 getRitualBtn.addEventListener('click',ritual)
 
+
+function handleSubmit(evt) {
+	evt.preventDefault();
+	
+	alert('the form has been submitted successfully')
+}
+let form = document.querySelector('#contact');
+
+form.addEventListener('submit', handleSubmit);

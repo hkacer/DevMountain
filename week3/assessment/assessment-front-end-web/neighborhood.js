@@ -8,3 +8,12 @@ function getRandom(){
 }
 
 random.addEventListener('click',getRandom)
+
+function handleSubmit(evt) {
+	evt.preventDefault();
+	
+	alert('the form has been submitted successfully')
+}
+let form = document.querySelector('#contact');
+
+form.addEventListener('submit', handleSubmit);
